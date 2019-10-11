@@ -1,5 +1,5 @@
 const alphabetNumberReference = {
-'a': '1', 'b': '2'}
+'a': '1', 'b': '2', 'z': '26'}
 
 const alphabetNumbers = (string) => {
 
@@ -8,11 +8,6 @@ const alphabetNumbers = (string) => {
   arrayOfString.forEach(character => {
     finalArray.push(alphabetNumberReference[character])
   })
-
-  // if(string === 'a') {
-  //   return '1'
-  // }
-  // return '1 2'
 
   return finalArray.join(" ")
 }
