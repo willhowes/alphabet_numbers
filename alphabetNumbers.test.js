@@ -4,4 +4,8 @@ describe('alphabetNumbers', () => {
   it('returns 1 for "a"', () => {
     expect(alphabetNumbers('a')).toEqual('1')
   })
+
+  it('returns "1 2" for an input of "ab"', () => {
+    expect(alphabetNumbers('ab')).toEqual('1 2')
+  })
 })

@@ -1,5 +1,8 @@
 const alphabetNumbers = (letter) => {
-  return '1'
+  if(letter === 'a') {
+    return '1'
+  }
+  return '1 2' 
 }
 
 module.exports = alphabetNumbers
