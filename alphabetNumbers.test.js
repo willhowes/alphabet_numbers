@@ -14,6 +14,8 @@ describe("alphabetNumbers", () => {
   });
 
   it("ignores non-letters", () => {
-    expect(alphabetNumbers("hi!.,:;`~@#${%^&*()}|[]/")).toEqual("8 9");
+    expect(alphabetNumbers("h!.,1234567890:;`~@#${%^&*()}|[]/i")).toEqual(
+      "8 9"
+    );
   });
 });

@@ -28,7 +28,8 @@ const alphabetNumberReference = {
 };
 
 const alphabetNumbers = string => {
-  const arrayOfString = toArray(string);
+  const stringFormated = removeNonLetters(string);
+  const arrayOfString = toArray(stringFormated);
   const finalArray = [];
   arrayOfString.forEach(character => {
     finalArray.push(alphabetNumberReference[character]);
@@ -37,10 +38,11 @@ const alphabetNumbers = string => {
   return finalArray.join(" ");
 };
 
+const removeNonLetters = stringToChange => {
+  return stringToChange.toLowerCase().replace(/[^a-zA-Z]/g, "");
+};
+
 const toArray = stringToConvert => {
-  return stringToConvert
-    .replace(/[^\w]/g, "")
-    .toLowerCase()
-    .split("");
+  return stringToConvert.split("");
 };
 module.exports = alphabetNumbers;
