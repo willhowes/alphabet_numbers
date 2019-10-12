@@ -18,4 +18,10 @@ describe("alphabetNumbers", () => {
       "8 9"
     );
   });
+
+  it("handles a whole sentance with punctuation", () => {
+    expect(alphabetNumbers("The sunset sets at twelve o' clock.")).toEqual(
+      "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+    );
+  });
 });
